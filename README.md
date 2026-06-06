@@ -1,17 +1,23 @@
-# Hotel-Reservation-System
-A console based java application.
-The main feauture of the app is in it's simplicity and use of core OOP feautures like Abstraction, Polymorphism, Encapsulation and Inheritance.
+## Refactoring Summary
 
-The detailed description of parameters used are described below. One can modify it to suit their need.
-The hotel has three categories of rooms: Super Delux, Delux and Luxury. Only the Delux and Super Delux have wi-fi facility in the rooms. 
-Delux and Luxury rooms may have either single or double occupancy. Each rooms has a a default room rate that is adjustable. 
-The system changes the status of room to “occupied” when it is reserved. There is a facility to cancel the reservation also. 
-The booking is done for some number of days. When a room is reserved, the room charge (room rate * no. of days) is displayed. 
-The system also shows the status of rooms (whether occupied or vacant) in each category. 
+This project has been refactored to improve code quality and maintainability. 
+The following code smells were identified and resolved across 11 files:
 
-The program displays a menu of alternatives to:
-1. Indicate the room type that needs to be booked 
-2. Indicate the occpancy (single/double) in that category.
+### Code Smells Fixed
+- **Long Method** — MainScreen.java
+- **Long Parameter List** — Book.java
+- **Primitive Obsession** — MainScreen.java, Book.java, Customer.java, Fare.java, Laundry.java, Transportation.java
+- **Switch Statement** — MainScreen.java, Book.java, Laundry.java, Transportation.java
+- **Duplicate Code** — Book.java, Deluxe.java, Laundry.java, Luxury.java, SuperDeluxe.java, Transportation.java
+- **Dead Code** — MainScreen.java, Book.java, Customer.java, Service.java
+- **Lazy Class** — Room.java, Service.java
+- **Inappropriate Intimacy** — Book.java
+- **Comment** — Deluxe.java, Luxury.java, SuperDeluxe.java
 
-If the rooms in a particular category are full, your program asks the person if it is acceptable to be placed in the 
-other category. If yes, appropriate room is assigned.
+### Refactoring Techniques Applied
+- Extract Method
+- Pull Up Method
+- Replace Magic Number with Symbolic Constant
+- Replace Conditional with Polymorphism
+- Consolidate Conditional Expression
+- Encapsulate Field

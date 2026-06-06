@@ -2,18 +2,16 @@ package com.Hotel.Reservation;
 
 public class Fare {
 
-	public int farecalculator(int days,int rate,int s)
-	{
-			if(s==1)
-			{
-				return days*rate;
-			}
-			
-			if(s==2)
-			{
-				return days*rate*2;
-			}
-	
-	return 0;
-}
+    private static final int OCCUPANCY_SINGLE = 1;
+    private static final int OCCUPANCY_DOUBLE = 2;
+
+    public int farecalculator(int days, int rate, int occupancy) {
+        if (occupancy == OCCUPANCY_SINGLE) {
+            return days * rate;
+        }
+        if (occupancy == OCCUPANCY_DOUBLE) {
+            return days * rate * OCCUPANCY_DOUBLE;
+        }
+        return 0;
+    }
 }
